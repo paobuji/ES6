@@ -21,3 +21,17 @@ a.call(obj) // 456
 2. apply
 
 3.bind
+
+var obj  = {
+    age : 20,
+    a : {
+        b : function (){
+            console.log(this.age)
+        }
+    }
+}
+
+var c =  obj.a.b.bind(obj);
+c();
+
+ bind跟 call 和 apply 的区别一点是bind的返回值是一个函数,需要接收.
