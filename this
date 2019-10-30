@@ -1,3 +1,5 @@
+简单说，this就是属性或方法“当前”所在的对象。
+
 1.  var f = function () {
   console.log(this.x);
 }
@@ -31,3 +33,16 @@ var obj ={
 
 obj.foo() // obj
 上面代码中，obj.foo方法执行时，它内部的this指向obj。
+
+4.var a = {
+  p: 'Hello',
+  b: {
+    m: function() {
+      console.log(this.p);
+    }
+  }
+};
+
+a.b.m() // undefined
+
+上面代码中，a.b.m方法在a对象的第二层，该方法内部的this不是指向a，而是指向a.b
