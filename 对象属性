@@ -1,0 +1,12 @@
+var obj = {
+  name : 'syy',
+  num  : 10,
+  arr  : [1,2,3],
+  obj  : {
+          name : 'chp',
+          age  : 20
+  },
+  fuc : function(){ console.log('syy') }
+}
+
+对象里面有几种属性: 字符串 数字 数组 对象 函数
