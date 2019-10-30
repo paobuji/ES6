@@ -13,3 +13,21 @@ f() // 1
 
 // obj 环境执行
 obj.f() // 2
+
+2. this === window // true
+
+function f() {
+  console.log(this === window);
+}
+f() // true
+上面代码说明，不管是不是在函数内部，只要是在全局环境下运行，this就是指顶层对象window。
+
+3.
+var obj ={
+  foo: function () {
+    console.log(this);
+  }
+};
+
+obj.foo() // obj
+上面代码中，obj.foo方法执行时，它内部的this指向obj。
