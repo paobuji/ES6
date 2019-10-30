@@ -1,6 +1,22 @@
 绑定this的方法
 
-1. call 
+1. call   因为函数在不同的对象中调用this会指向不同的对象,所以需要为函数绑定指定对象.
+
+call方法的参数，应该是一个对象。如果参数为空、null和undefined，则默认传入全局对象。
+
+var n = 123;
+var obj = { n: 456 };
+
+function a() {
+  console.log(this.n);
+}
+
+a.call() // 123
+a.call(null) // 123
+a.call(undefined) // 123
+a.call(window) // 123
+a.call(obj) // 456
+
 
 2. apply
 
